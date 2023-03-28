@@ -43,8 +43,18 @@ const LoginForm = ({handleSubmit}) => {
             <form id="login-form" onSubmit={handleSubmitForm}>
 
                 <div className='credentials-and-password-container'>
-                    <Input label={'Username'} placeholder={'bep@bep.com'} type={'text'}/>
-                    <Input label={'Password'} placeholder={''} type={'password'}/>
+                    <Input
+                        label={'Username'}
+                        placeholder={'bep@bep.com'}
+                        type={'text'}
+                        value={credentials.login}
+                        handleChange={handleLoginChange}/>
+                    <Input
+                        label={'Password'}
+                        placeholder={''}
+                        type={'password'}
+                        value={credentials.password}
+                        handleChange={handlePasswordChange}/>
                     <button
                         className='login-page-call-to-action'
                         type="submit"
