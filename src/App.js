@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from "./Page/Home/Home";
 import Login from "./Page/Login/LoginPage";
+import List from "./Page/List/List";
 
 
 export function RequireAuth({ children }) {
@@ -24,8 +25,14 @@ function App() {
       <div>
           <BrowserRouter>
               <Routes>
-                      <Route path="home" element={<Home />} />
-                      <Route index element={<Login />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/home" element={
+                      <RequireAuth>
+                          <Home />
+                      </RequireAuth>
+                  } />
+                  <Route path="/list" element={<List />} />
+
               </Routes>
           </BrowserRouter>
       </div>

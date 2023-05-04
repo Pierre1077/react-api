@@ -23,7 +23,7 @@ const LoginPage = () => {
                     const authToken = localStorage.getItem('AUTH_TOKEN');
                     console.log(authToken)
                     if(authToken){
-                        navigate('/Home');
+                        navigate('/home');
                     }
                 })
                 .catch(error => {
