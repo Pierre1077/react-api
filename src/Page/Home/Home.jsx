@@ -19,7 +19,6 @@ const HomePage = () => {
 
     const getPokemonData = (page = 1) => {
 
-        console.log('1 : ' + nextPage)
 
         const userToken = localStorage.getItem('AUTH_TOKEN')
         axios.get('http://127.0.0.1:8000/api/pokemon?page='+page, {
@@ -28,7 +27,6 @@ const HomePage = () => {
             }
         })
             .then(response => {
-                console.log(response.data);
                 setPokemonData([...pokemonData,...response.data['hydra:member']])
 
             })
@@ -108,7 +106,12 @@ const HomePage = () => {
             </div>
 
                 <div className={'loadMore'}>
-                    <button  onClick={() => {setNextPage(nextPage + 1); getPokemonData(nextPage + 1);}}>charger plus</button>
+                    {nextPage !== 6 ?
+                        <button  onClick={() => {setNextPage(nextPage + 1); getPokemonData(nextPage + 1);}}>
+                            charger plus
+                        </button>
+                        : ''}
+
                 </div>
             </div>
         </div>

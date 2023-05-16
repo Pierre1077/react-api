@@ -2,6 +2,7 @@ import LoginForm from "../../Component/LoginForm/LoginForm";
 import {useState} from "react";
 import axios, * as others from 'axios';
 import { useNavigate } from "react-router-dom";
+import './LoginPage.css'
 
 
 
@@ -40,8 +41,7 @@ const LoginPage = () => {
     };
 
     return(
-        <div>
-
+        <div className={'login__container'}>
             <LoginForm
                 handleSubmit={handleSubmit}
             />

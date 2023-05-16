@@ -5,8 +5,8 @@ import './Input.css';
 
 const Input = ({ id, label, value, type, required, placeholder, handleChange, onFocus }) => {
 
-    return (<>
-        <div className="input-div">
+    return (
+        <div className="input-div" style={{marginBottom: '15px'}}>
             { label &&
                 <label className="input-label">
                     {label}
@@ -23,7 +23,7 @@ const Input = ({ id, label, value, type, required, placeholder, handleChange, on
                 onFocus={onFocus}
             />
         </div>
-    </>);
+        );
 };
 
 export default Input;

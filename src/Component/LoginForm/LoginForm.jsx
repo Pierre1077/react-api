@@ -38,9 +38,10 @@ const LoginForm = ({handleSubmit}) => {
     };
     //TODO Add Credentials Inputs (With Input Component)
     return (
-        <>
+        <div>
 
-            <form id="login-form" onSubmit={handleSubmitForm}>
+            <h2 className={'login-title'}>Login</h2>
+            <form id="login-form" onSubmit={handleSubmitForm} className={'login-form'}>
 
                 <div className='credentials-and-password-container'>
                     <Input
@@ -51,20 +52,23 @@ const LoginForm = ({handleSubmit}) => {
                         handleChange={handleLoginChange}/>
                     <Input
                         label={'Password'}
-                        placeholder={''}
+                        placeholder={'password'}
                         type={'password'}
                         value={credentials.password}
                         handleChange={handlePasswordChange}/>
-                    <button
-                        className='login-page-call-to-action'
-                        type="submit"
-                    >
-                        Submit
-                    </button>
+
+                    <div className={'send__wrapper'}>
+                        <button
+                            className='login-page-call-to-action'
+                            type="submit"
+                        >
+                            Submit
+                        </button>
+                    </div>
 
                 </div>
             </form>
-        </>
+        </div>
     );
 };
 
