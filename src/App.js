@@ -11,7 +11,7 @@ export function RequireAuth({ children }) {
         const userToken = localStorage.getItem('AUTH_TOKEN') // TODO Get user from local storage
 
         if (userToken === null) {
-            return <Navigate to="/login" replace={true} />
+            return <Navigate to="/" replace={true} />
         } else {
             return children;
     }
@@ -25,14 +25,13 @@ function App() {
       <div>
           <BrowserRouter>
               <Routes>
-                  <Route path="/login" element={<Login />} />
+                  <Route path="/" element={<Login />} />
                   <Route path="/home" element={
                       <RequireAuth>
                           <Home />
                       </RequireAuth>
                   } />
                   <Route path="/list" element={<List />} />
-
               </Routes>
           </BrowserRouter>
       </div>

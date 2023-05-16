@@ -1,0 +1,52 @@
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 5px;
+  border-radius: 8px;
+}
+.pokemonCard .pokemon__sprite {
+  padding: 20px;
+  border-radius: 99%;
+}
+.pokemonCard .pokemon__infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 10px;
+  color: #ffffff;
+}
+.pokemonCard .pokemon__infos p {
+  font-size: 24px;
+}
+.pokemonCard .pokemon__infos h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.pokemonCard .types {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  gap: 10px;
+}
+.pokemonCard .types div {
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pokemonCard .pokemon__abilities {
+  color: white;
+}
+.pokemonCard .pokemon__abilities span {
+  font-weight: 600;
+}
+.pokemonCard .pokemon__abilities p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=Card.css.map */
