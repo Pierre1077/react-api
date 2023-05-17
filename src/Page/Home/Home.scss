@@ -7,9 +7,11 @@
 
 .title {
   font-weight: 400;
+  font-size: 30px;
 
   span {
     font-weight: 600;
+    font-size: 25px;
   }
 }
 
@@ -29,6 +31,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 50px;
 }
 
 .logo {
